@@ -88,7 +88,7 @@ namespace TheWorld.Controllers.Api
             {
                 _logger.LogError("Failed to save new stop", ex);
                 Response.StatusCode = (int)HttpStatusCode.BadRequest;
-                return Json("Failed to save new stop");
+                return Json("Failed to save new stop: " + ex.ToString());
             }
 
             Response.StatusCode = (int)HttpStatusCode.BadRequest;

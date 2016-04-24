@@ -17,7 +17,8 @@
     "Newtonsoft.Json": "6.0.6",
     "AutoMapper": "4.2.1",
     "System.Net.Http": "4.0.1-beta-23516",
-    "Microsoft.AspNet.Identity.EntityFramework": "3.0.0-rc1-final"
+    "Microsoft.AspNet.Identity.EntityFramework": "3.0.0-rc1-final",
+    "Microsoft.AspNet.Diagnostics": "1.0.0-rc1-final"
   },
 
   "commands": {
@@ -41,5 +42,10 @@
   "publishExclude": [
     "**.user",
     "**.vspscc"
-  ]
+  ],
+
+  "scripts": {
+    "prepublish": [ "npm install", "bower install" ],
+    "prepare": "gulp minify"
+  }
 }
